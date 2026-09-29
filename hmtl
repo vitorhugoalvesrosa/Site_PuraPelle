@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PuraPelle Clinic | Dra. Camilla Brião - Biomedicina Estética</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            50: '#FAF6EF',
+                            100: '#F4ECD9',
+                            200: '#E8D8B3',
+                            300: '#DCC48C',
+                            400: '#D4AF37',
+                            500: '#C5A059',
+                            600: '#A8823E',
+                            700: '#86642A',
+                            800: '#64481C',
+                        },
+                        rose: {
+                            50: '#FDF7F4',
+                            100: '#F7EBE6',
+                            200: '#EEDAD1',
+                            300: '#E2C2B3',
+                            400: '#D3A592',
+                        },
+                        champagne: '#E8D5C8',
+                        grafite: '#2D2D2D',
+                        softdark: '#1C1C1C',
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'lux': '0 20px 40px -15px rgba(197, 160, 89, 0.25)',
+                        'glow': '0 0 35px rgba(212, 175, 55, 0.35)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #2D2D2D;
+            background-color: #FDF7F4;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .bg-gold-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #C5A059 50%, #A8823E 100%);
+        }
+
+        .bg-rose-gradient {
+            background: linear-gradient(180deg, #FDF7F4 0%, #F7EBE6 100%);
+        }
+
+        .bg-luxury-dark {
+            background: linear-gradient(135deg, #2D2D2D 0%, #1C1C1C 100%);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(232, 213, 200, 0.8);
+        }
+
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #C5A059 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-border-glow {
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .gold-border-glow:hover {
+            border-color: #C5A059;
+            box-shadow: 0 16px 36px -12px rgba(197, 160, 89, 0.35);
+            transform: translateY(-4px);
+        }
+
+        .halo-frame {
+            position: relative;
+            border-radius: 9999px;
+            padding: 8px;
+            background: linear-gradient(135deg, #D4AF37, #E8D5C8, #C5A059);
+            box-shadow: 0 20px 40px -10px rgba(197, 160, 89, 0.3);
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(212, 175, 55, 0.6); }
+        }
+        .animate-glow {
+            animation: pulseGlow 4s infinite ease-in-out;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FDF7F4;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #C5A059;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #A8823E;
+        }
+    </style>
+</head>
+<body class="antialiased text-grafite selection:bg-rose-200 selection:text-grafite">
+
+    <!-- HEADER / NAVBAR -->
+    <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-rose-50/95 backdrop-blur-md border-b border-champagne/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- PuraPelle Clinic Logo -->
+                <a href="#inicio" class="flex items-center gap-3 group">
+                    <div class="relative w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-sm border border-gold-300 group-hover:border-gold-500 transition-colors">
+                        <svg class="w-8 h-8 text-gold-500" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 2"/>
+                            <path d="M36 34 C 28 34, 22 42, 22 50 C 22 58, 28 66, 36 66 C 43 66, 45 59, 45 57" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                            <path d="M50 34 C 60 34, 66 39, 66 47 C 66 52, 61 56, 56 56 C 63 56, 68 60, 68 67 C 68 75, 60 76, 50 76 L 50 34" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                            <path d="M60 28 Q 70 18, 78 23 Q 73 33, 63 31 Z" fill="#D4AF37" opacity="0.85"/>
+                        </svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif text-2xl font-bold tracking-wide text-grafite leading-none group-hover:text-gold-600 transition-colors">PuraPelle <span class="text-xs font-sans tracking-normal uppercase text-gold-600">Clinic</span></span>
+                        <span class="text-[10px] tracking-widest text-gold-600 uppercase font-semibold mt-1">por Dra. Camilla Brião</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium tracking-wide">
+                    <a href="#inicio" class="hover:text-gold-600 transition-colors">Início</a>
+                    <a href="#sobre" class="hover:text-gold-600 transition-colors">A Clínica</a>
+                    <a href="#dra-camilla" class="hover:text-gold-600 transition-colors">Dra. Camilla Brião</a>
+                    <a href="#tratamentos" class="hover:text-gold-600 transition-colors">Tratamentos</a>
+                    <a href="#simulador" class="hover:text-gold-600 transition-colors">Simulador</a>
+                    <a href="#depoimentos" class="hover:text-gold-600 transition-colors">Depoimentos</a>
+                    <a href="#contato" class="hover:text-gold-600 transition-colors">Contato</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden lg:flex items-center">
+                    <a href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20na%20PuraPelle%20Clinic%20com%20a%20Dra.%20Camilla%20Bri%C3%A3o." 
+                       target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex items-center gap-2 bg-gold-gradient text-white px-6 py-2.5 rounded-full font-medium text-sm shadow-md hover:shadow-lux hover:opacity-95 transition-all transform hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Agendar no WhatsApp</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-grafite hover:text-gold-600 focus:outline-none" aria-label="Abrir menu">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-rose-50 border-b border-champagne px-4 pt-2 pb-6 space-y-3 shadow-lg">
+            <a href="#inicio" class="mobile-link block py-2 text-base font-medium border-b border-champagne/30">Início</a>
+            <a href="#sobre" class="mobile-link block py-2 text-base font-medium border-b border-champagne/30">A Clínica PuraPelle</a>
+            <a href="#dra-camilla" class="mobile-link block py-2 text-base font-medium border-b border-champagne/30">Dra. Camilla Brião</a>
+            <a href="#tratamentos" class="mobile-link block py-2 text-base font-medium border-b border-champagne/30">Tratamentos Faciais e Corporais</a>
+            <a href="#simulador" class="mobile-link block py-2 text-base font-medium border-b border-champagne/30">Simulador de Plano</a>
+            <a href="#depoimentos" class="mobile-link block py-2 text-base font-medium border-b border-champagne/30">Depoimentos</a>
+            <a href="#contato" class="mobile-link block py-2 text-base font-medium border-b border-champagne/30">Contato & Agendamento</a>
+            <div class="pt-2">
+                <a href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Camilla%20Bri%C3%A3o%20na%20PuraPelle%20Clinic." target="_blank" rel="noopener noreferrer" 
+                   class="w-full inline-flex items-center justify-center gap-2 bg-gold-gradient text-white px-6 py-3 rounded-full font-medium text-sm shadow-md">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Agendar no WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="relative pt-32 pb-20 md:pt-40 md:pb-32 bg-rose-gradient overflow-hidden">
+        <div class="absolute top-10 right-0 -mr-20 w-96 h-96 bg-gold-200/30 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 w-80 h-80 bg-champagne/40 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left Content -->
+                <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 border border-gold-300 shadow-sm text-gold-700 text-xs sm:text-sm font-semibold tracking-wider uppercase">
+                        <i class="fa-solid fa-sparkles text-gold-500"></i>
+                        <span>PuraPelle Clinic • Biomedicina Estética</span>
+                    </div>
+
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-grafite leading-[1.15]">
+                        Sua beleza realçada com <span class="text-gold-gradient font-semibold italic">ciência, delicadeza e naturalidade</span>.
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-gray-700 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Tratamentos faciais e corporais de alta precisão liderados pela <strong>Dra. Camilla Brião</strong>. Rejuvenescimento harmônico, contorno corporal, Botox, Bioestimuladores, Drenagem e Lipo sem cortes.
+                    </p>
+
+                    <!-- Action CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20consulta%20de%20avalia%C3%A7%C3%A3o%20na%20PuraPelle%20Clinic%20com%20a%20Dra.%20Camilla%20Bri%C3%A3o." 
+                           target="_blank" rel="noopener noreferrer" 
+                           class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gold-gradient text-white px-8 py-4 rounded-full font-semibold text-base shadow-lux hover:opacity-95 transition-all transform hover:-translate-y-1">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            <span>Agendar Avaliação no WhatsApp</span>
+                        </a>
+
+                        <a href="#simulador" 
+                           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/90 text-grafite border border-champagne hover:border-gold-400 px-8 py-4 rounded-full font-semibold text-base shadow-sm hover:bg-white transition-all">
+                            <i class="fa-solid fa-wand-magic-sparkles text-sm text-gold-600"></i>
+                            <span>Simular Plano Personalizado</span>
+                        </a>
+                    </div>
+
+                    <!-- Highlight Badges -->
+                    <div class="pt-8 grid grid-cols-3 gap-4 border-t border-champagne/60 mt-8">
+                        <div class="text-center lg:text-left">
+                            <p class="font-serif text-2xl sm:text-3xl font-bold text-gold-600">+1.500</p>
+                            <p class="text-xs sm:text-sm text-gray-600">Pacientes Satisfeitas</p>
+                        </div>
+                        <div class="text-center lg:text-left">
+                            <p class="font-serif text-2xl sm:text-3xl font-bold text-gold-600">Segurança</p>
+                            <p class="text-xs sm:text-sm text-gray-600">Protocolos Certificados</p>
+                        </div>
+                        <div class="text-center lg:text-left">
+                            <p class="font-serif text-2xl sm:text-3xl font-bold text-gold-600">Insumos</p>
+                            <p class="text-xs sm:text-sm text-gray-600">Padrão Ouro Anvisa</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Right: Official Portrait of Dra. Camilla Brião (84954_2.jpg) -->
+                <div class="lg:col-span-5 flex justify-center relative">
+                    <div class="relative w-full max-w-sm sm:max-w-md">
+                        <!-- Glow Backing -->
+                        <div class="absolute -inset-4 rounded-full bg-gradient-to-tr from-gold-300 via-rose-200 to-gold-400 opacity-60 blur-2xl transform rotate-3 animate-glow"></div>
+                        
+                        <!-- Circular Luxury Frame for Official Photo -->
+                        <div class="relative rounded-full p-3 bg-white shadow-2xl border-2 border-gold-300">
+                            <div class="relative rounded-full overflow-hidden aspect-square border-4 border-rose-100 bg-white shadow-inner flex items-center justify-center">
+                                
+                                <img src="84954_2.jpg" 
+                                     alt="Dra. Camilla Brião - PuraPelle Clinic" 
+                                     class="w-full h-full object-cover object-center scale-105 hover:scale-110 transition-transform duration-700"
+                                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1594824813566-7885a3977348?auto=format&fit=crop&q=80&w=800';">
+                                
+                            </div>
+                        </div>
+
+                        <!-- Floating Luxury Seal -->
+                        <div class="absolute -bottom-2 -left-2 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-lux border border-gold-200 flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-gold-100 flex items-center justify-center text-gold-600 text-lg border border-gold-300 shrink-0">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-bold uppercase text-gold-700 tracking-wider">PuraPelle Clinic</p>
+                                <p class="text-xs font-bold text-grafite">Dra. Camilla Brião</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PHILOSOPHY / A CLÍNICA SECTION -->
+    <section id="sobre" class="py-20 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest uppercase text-gold-600 bg-rose-50 px-3 py-1 rounded-md border border-gold-200">
+                    A Conceituação PuraPelle
+                </span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-grafite mt-3">
+                    Elegância, Ciência e Resultados Naturais
+                </h2>
+                <div class="w-16 h-0.5 bg-gold-400 mx-auto my-4"></div>
+                <p class="text-gray-600 text-base leading-relaxed">
+                    A <strong>PuraPelle Clinic</strong> nasceu do desejo de proporcionar uma experiência em estética avançada onde o bem-estar e o respeito aos traços individuais venham sempre em primeiro lugar.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Pillar 1 -->
+                <div class="p-8 rounded-2xl bg-rose-50 border border-champagne hover:shadow-lux transition-all text-center group">
+                    <div class="w-14 h-14 rounded-full bg-white text-gold-600 flex items-center justify-center mx-auto mb-6 text-2xl shadow-sm group-hover:scale-110 transition-transform border border-gold-200">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-grafite mb-3">Atendimento Exclusivo</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Cada consulta inicia-se com um mapeamento facial e corporal minucioso, respeitando suas aspirações e contornos naturais.
+                    </p>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="p-8 rounded-2xl bg-rose-50 border border-champagne hover:shadow-lux transition-all text-center group">
+                    <div class="w-14 h-14 rounded-full bg-white text-gold-600 flex items-center justify-center mx-auto mb-6 text-2xl shadow-sm group-hover:scale-110 transition-transform border border-gold-200">
+                        <i class="fa-solid fa-microscope"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-grafite mb-3">Biomedicina de Ponta</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Procedimentos embasados na literatura científica recente, com toxinas purificadas, bioestimuladores e preenchedores aprovados pela ANVISA.
+                    </p>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="p-8 rounded-2xl bg-rose-50 border border-champagne hover:shadow-lux transition-all text-center group">
+                    <div class="w-14 h-14 rounded-full bg-white text-gold-600 flex items-center justify-center mx-auto mb-6 text-2xl shadow-sm group-hover:scale-110 transition-transform border border-gold-200">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-grafite mb-3">Estética Consciente</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Sem exageros ou transformações artificiais. O foco da PuraPelle Clinic é renovar a vitalidade e a firmeza da sua pele.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DRA. CAMILLA BRIÃO SECTION -->
+    <section id="dra-camilla" class="py-20 bg-rose-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Portrait with Official Image 84954_2.jpg -->
+                <div class="lg:col-span-5">
+                    <div class="relative max-w-md mx-auto">
+                        <div class="halo-frame">
+                            <div class="rounded-full overflow-hidden bg-white aspect-square border-4 border-white shadow-xl relative flex items-center justify-center">
+                                <img src="84954_2.jpg" 
+                                     alt="Dra. Camilla Brião - PuraPelle Clinic" 
+                                     class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500"
+                                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1594824813566-7885a3977348?auto=format&fit=crop&q=80&w=800';">
+                            </div>
+                        </div>
+                        
+                        <!-- Quote Card -->
+                        <div class="mt-8 bg-white p-6 rounded-2xl border border-champagne shadow-sm relative text-center">
+                            <i class="fa-solid fa-quote-left text-gold-400 text-3xl absolute top-3 left-4 opacity-25"></i>
+                            <p class="font-serif italic text-grafite text-lg relative z-10 pt-2 leading-snug">
+                                "A verdadeira harmonização estética não transforma quem você é; ela ilumina a sua melhor versão."
+                            </p>
+                            <p class="text-xs font-bold text-gold-700 uppercase tracking-widest mt-3">— Dra. Camilla Brião</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Biography Text -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-block">
+                        <span class="text-xs font-bold tracking-widest uppercase text-gold-600 bg-white px-3 py-1 rounded-md border border-gold-200">
+                            Biomedicina Estética de Alta Performance
+                        </span>
+                    </div>
+
+                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-grafite">
+                        Dra. Camilla Brião
+                    </h2>
+                    <p class="text-xs font-bold uppercase tracking-wider text-gold-700">
+                        Fundadora & Responsável Técnica • PuraPelle Clinic
+                    </p>
+
+                    <p class="text-base text-gray-700 leading-relaxed">
+                        A <strong>Dra. Camilla Brião</strong> atua com excelência no planejamento facial e corporal integrado. Com foco constante em atualização científica e atualização contínua em técnicas injetáveis, oferece protocolos de rejuvenescimento sutil e refinado.
+                    </p>
+
+                    <p class="text-base text-gray-700 leading-relaxed">
+                        Em sua prática clínica na <strong>PuraPelle Clinic</strong>, a Dra. Camilla prioriza avaliações individualizadas, entendendo a biologia de cada pele para prescrever o tratamento ideal, seja para prevenção de rugas, estimulação de colágeno ou definição de contornos corporais.
+                    </p>
+
+                    <!-- Qualifications grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <div class="p-4 rounded-xl bg-white border border-champagne/60 flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-gold-100 flex items-center justify-center text-gold-600 shrink-0">
+                                <i class="fa-solid fa-user-doctor text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-grafite text-sm">Biomédica Esteta</h3>
+                                <p class="text-xs text-gray-600 mt-0.5">Especialista habilitada em procedimentos injetáveis e corporais.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-white border border-champagne/60 flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-gold-100 flex items-center justify-center text-gold-600 shrink-0">
+                                <i class="fa-solid fa-award text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-grafite text-sm">Protocolos Autorais</h3>
+                                <p class="text-xs text-gray-600 mt-0.5">Combinações exclusivas PuraPelle para acelerar resultados.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-2">
+                        <a href="https://wa.me/5500000000000?text=Ol%C3%A1%20Dra.%20Camilla%20Bri%C3%A3o%21%20Gostaria%20de%20agendar%20uma%20consulta%20de%20avalia%C3%A7%C3%A3o%20na%20PuraPelle%20Clinic." 
+                           target="_blank" class="inline-flex items-center gap-2 font-bold text-gold-600 hover:text-gold-700 transition-colors">
+                            <span>Agendar consulta com a Dra. Camilla Brião</span>
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TRATAMENTOS SECTION -->
+    <section id="tratamentos" class="py-20 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest uppercase text-gold-600 bg-rose-50 px-3 py-1 rounded-md border border-gold-200">
+                    Menu PuraPelle
+                </span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-grafite mt-3">
+                    Procedimentos Faciais e Corporais
+                </h2>
+                <p class="text-gray-600 text-base mt-4">
+                    Conheça nossas soluções integradas para prevenção do envelhecimento, firmeza da pele e contorno corporal.
+                </p>
+            </div>
+
+            <!-- Cards Grid Facial & Corporal -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Treatment 1: Botox -->
+                <div class="bg-rose-50 rounded-2xl overflow-hidden border border-champagne gold-border-glow flex flex-col justify-between h-full">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=800" 
+                             alt="Toxina Botulínica PuraPelle Clinic" 
+                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                             onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1512290900676-26c2a6a095ae?auto=format&fit=crop&q=80&w=800';">
+                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-gold-700 font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
+                            Estética Facial
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-grafite mb-2">Toxina Botulínica (Botox)</h3>
+                            <p class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-4">
+                                Suavização e prevenção de rugas dinâmicas na testa, glabela e olhos. Devolve o descanso facial sem congelar suas expressões.
+                            </p>
+                            <ul class="space-y-1.5 text-xs text-gray-700 mb-6">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Prevenção de marcas profundas</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Elevação discreta das sobrancelhas</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Aplicação rápida e indolor</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/5500000000000?text=Gostaria%20de%20agendar%20Botox%20na%20PuraPelle%20Clinic%20com%20a%20Dra.%20Camilla." target="_blank" 
+                           class="w-full text-center py-3 px-4 rounded-xl bg-white border border-gold-300 text-gold-700 font-semibold text-xs uppercase tracking-wider hover:bg-gold-50 transition-colors">
+                            Agendar no WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Treatment 2: Bioestimuladores -->
+                <div class="bg-rose-50 rounded-2xl overflow-hidden border border-champagne gold-border-glow flex flex-col justify-between h-full">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1512290900676-26c2a6a095ae?auto=format&fit=crop&q=80&w=800" 
+                             alt="Bioestimuladores de Colágeno" 
+                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-gold-700 font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
+                            Facial & Corporal
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-grafite mb-2">Bioestimuladores de Colágeno</h3>
+                            <p class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-4">
+                                Aplicação de ativos que reativam a produção natural de colágeno, combatendo a flacidez e reestruturando a densidade da pele.
+                            </p>
+                            <ul class="space-y-1.5 text-xs text-gray-700 mb-6">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Firmeza progressiva e duradoura</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Melhora no viço e elasticidade</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Resultados contínuos por até 2 anos</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/5500000000000?text=Quero%20saber%20mais%20sobre%20Bioestimuladores%20de%20Col%C3%A1geno." target="_blank" 
+                           class="w-full text-center py-3 px-4 rounded-xl bg-white border border-gold-300 text-gold-700 font-semibold text-xs uppercase tracking-wider hover:bg-gold-50 transition-colors">
+                            Agendar no WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Treatment 3: Preenchimento Hialurônico -->
+                <div class="bg-rose-50 rounded-2xl overflow-hidden border border-champagne gold-border-glow flex flex-col justify-between h-full">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=800" 
+                             alt="Preenchimento com Ácido Hialurônico" 
+                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-gold-700 font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
+                            Estética Facial
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-grafite mb-2">Preenchimento Hialurônico</h3>
+                            <p class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-4">
+                                Preenchimento labial, sulco nasogeniano ('bigode chinês'), olheiras e reestruturação do contorno mandibular com naturalidade.
+                            </p>
+                            <ul class="space-y-1.5 text-xs text-gray-700 mb-6">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Lábios desenhados e hidratados</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Restauração de volumes perdidos</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Ácido Hialurônico 100% reabsorvível</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/5500000000000?text=Gostaria%20de%20agendar%20Preenchimento%20Labial/Facial." target="_blank" 
+                           class="w-full text-center py-3 px-4 rounded-xl bg-white border border-gold-300 text-gold-700 font-semibold text-xs uppercase tracking-wider hover:bg-gold-50 transition-colors">
+                            Agendar no WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Treatment 4: Lipo sem Cortes -->
+                <div class="bg-rose-50 rounded-2xl overflow-hidden border border-champagne gold-border-glow flex flex-col justify-between h-full">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=800" 
+                             alt="Lipo sem Cortes Corporal" 
+                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-gold-700 font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
+                            Estética Corporal
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-grafite mb-2">Lipo sem Cortes</h3>
+                            <p class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-4">
+                                Protocolo para quebra de gordura localizada no abdômen, flancos e coxas, combinando enzimas de alta eficiência e tecnologias não invasivas.
+                            </p>
+                            <ul class="space-y-1.5 text-xs text-gray-700 mb-6">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Redução visível de medidas</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Sem necessidade de pós-operatório</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Redefinição da silhueta corporal</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/5500000000000?text=Quero%20saber%20mais%20sobre%20a%20Lipo%20sem%20Cortes." target="_blank" 
+                           class="w-full text-center py-3 px-4 rounded-xl bg-white border border-gold-300 text-gold-700 font-semibold text-xs uppercase tracking-wider hover:bg-gold-50 transition-colors">
+                            Agendar no WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Treatment 5: Drenagem Linfática Estética -->
+                <div class="bg-rose-50 rounded-2xl overflow-hidden border border-champagne gold-border-glow flex flex-col justify-between h-full">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=800" 
+                             alt="Drenagem Linfática Estética" 
+                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-gold-700 font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
+                            Estética Corporal
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-grafite mb-2">Drenagem Linfática Estética</h3>
+                            <p class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-4">
+                                Massagem especializada para estimulação do sistema linfático, desintoxicação do organismo e eliminação de edemas e retenção.
+                            </p>
+                            <ul class="space-y-1.5 text-xs text-gray-700 mb-6">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Alívio imediato do inchaço</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Melhora na oxigenação da pele</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Sensação revigorante de leveza</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/5500000000000?text=Quero%20agendar%20Drenagem%20Linf%C3%A1tica%20na%20PuraPelle%20Clinic." target="_blank" 
+                           class="w-full text-center py-3 px-4 rounded-xl bg-white border border-gold-300 text-gold-700 font-semibold text-xs uppercase tracking-wider hover:bg-gold-50 transition-colors">
+                            Agendar no WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Treatment 6: Protocolo de Estrias e Celulite -->
+                <div class="bg-rose-50 rounded-2xl overflow-hidden border border-champagne gold-border-glow flex flex-col justify-between h-full">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&q=80&w=800" 
+                             alt="Tratamento de Estrias e Celulite" 
+                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-gold-700 font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
+                            Renovação Cutânea
+                        </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-serif text-2xl font-bold text-grafite mb-2">Protocolo para Estrias & Textura</h3>
+                            <p class="text-gray-600 text-xs sm:text-sm leading-relaxed mb-4">
+                                Microagulhamento associado a fatores de crescimento para regeneração profunda do tecido, atenuando estrias e celulites.
+                            </p>
+                            <ul class="space-y-1.5 text-xs text-gray-700 mb-6">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Uniformização do tom e relevo</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Estímulo intenso de elastina</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-gold-500"></i> Suavização do aspecto 'casca de laranja'</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/5500000000000?text=Gostaria%20de%20saber%20mais%20sobre%20Tratamento%20de%20Estrias." target="_blank" 
+                           class="w-full text-center py-3 px-4 rounded-xl bg-white border border-gold-300 text-gold-700 font-semibold text-xs uppercase tracking-wider hover:bg-gold-50 transition-colors">
+                            Agendar no WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SIMULADOR INTERATIVO SECTION -->
+    <section id="simulador" class="py-20 bg-rose-gradient relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold tracking-widest uppercase text-gold-600 bg-white px-3 py-1 rounded-md border border-gold-200">
+                    Atendimento Interativo
+                </span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-grafite mt-3">
+                    Simulador do Seu Plano PuraPelle
+                </h2>
+                <p class="text-gray-600 text-sm sm:text-base mt-2">
+                    Monte seu planejamento personalizado escolhendo suas preferências e receba um direcionamento direto da Dra. Camilla Brião.
+                </p>
+            </div>
+
+            <!-- Simulator Container Card -->
+            <div class="bg-white rounded-3xl shadow-xl p-6 sm:p-10 border border-champagne">
+                
+                <!-- Step 1: Área Principal -->
+                <div class="mb-8">
+                    <label class="block font-serif text-xl font-bold text-grafite mb-3">
+                        1. Qual região você deseja focar prioritariamente?
+                    </label>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="area-options">
+                        <button type="button" data-area="Face e Pescoço (Facial)" class="sim-btn-area p-4 rounded-xl border-2 border-gray-200 text-center font-semibold text-gray-700 hover:border-gold-400 transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-sparkles text-gold-500"></i>
+                            <span>Face & Pescoço</span>
+                        </button>
+                        <button type="button" data-area="Corpo e Contorno (Corporal)" class="sim-btn-area p-4 rounded-xl border-2 border-gray-200 text-center font-semibold text-gray-700 hover:border-gold-400 transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-person-dress text-gold-500"></i>
+                            <span>Corpo & Contorno</span>
+                        </button>
+                        <button type="button" data-area="Facial + Corporal (Completo)" class="sim-btn-area p-4 rounded-xl border-2 border-gray-200 text-center font-semibold text-gray-700 hover:border-gold-400 transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-gem text-gold-500"></i>
+                            <span>Plano Completo</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Procedimentos Desejados -->
+                <div class="mb-8">
+                    <label class="block font-serif text-xl font-bold text-grafite mb-3">
+                        2. Quais procedimentos despertam seu interesse? <span class="text-xs font-normal text-gray-500">(Selecione um ou mais)</span>
+                    </label>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3" id="goals-options">
+                        <button type="button" data-goal="Toxina Botulínica (Botox)" class="sim-btn-goal p-3 rounded-xl border border-gray-200 text-left text-xs sm:text-sm text-gray-700 hover:border-gold-400 transition-all">
+                            <i class="fa-solid fa-check me-1 text-gold-500 opacity-0 transition-opacity"></i> Botox
+                        </button>
+                        <button type="button" data-goal="Bioestimuladores de Colágeno" class="sim-btn-goal p-3 rounded-xl border border-gray-200 text-left text-xs sm:text-sm text-gray-700 hover:border-gold-400 transition-all">
+                            <i class="fa-solid fa-check me-1 text-gold-500 opacity-0 transition-opacity"></i> Bioestimuladores
+                        </button>
+                        <button type="button" data-goal="Preenchimento Hialurônico / Lábios" class="sim-btn-goal p-3 rounded-xl border border-gray-200 text-left text-xs sm:text-sm text-gray-700 hover:border-gold-400 transition-all">
+                            <i class="fa-solid fa-check me-1 text-gold-500 opacity-0 transition-opacity"></i> Preenchimento Labial
+                        </button>
+                        <button type="button" data-goal="Lipo sem Cortes" class="sim-btn-goal p-3 rounded-xl border border-gray-200 text-left text-xs sm:text-sm text-gray-700 hover:border-gold-400 transition-all">
+                            <i class="fa-solid fa-check me-1 text-gold-500 opacity-0 transition-opacity"></i> Lipo sem Cortes
+                        </button>
+                        <button type="button" data-goal="Drenagem Linfática Estética" class="sim-btn-goal p-3 rounded-xl border border-gray-200 text-left text-xs sm:text-sm text-gray-700 hover:border-gold-400 transition-all">
+                            <i class="fa-solid fa-check me-1 text-gold-500 opacity-0 transition-opacity"></i> Drenagem
+                        </button>
+                        <button type="button" data-goal="Protocolo para Estrias" class="sim-btn-goal p-3 rounded-xl border border-gray-200 text-left text-xs sm:text-sm text-gray-700 hover:border-gold-400 transition-all">
+                            <i class="fa-solid fa-check me-1 text-gold-500 opacity-0 transition-opacity"></i> Tratamento Estrias
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Nome da Paciente -->
+                <div class="mb-8">
+                    <label class="block font-serif text-xl font-bold text-grafite mb-2" for="sim-patient-name">
+                        3. Seu nome completo:
+                    </label>
+                    <input type="text" id="sim-patient-name" placeholder="Digite como prefere ser chamada..." 
+                           class="w-full px-4 py-3 rounded-xl bg-rose-50/50 border border-champagne focus:border-gold-500 focus:outline-none text-sm">
+                </div>
+
+                <!-- Result Summary Box -->
+                <div id="sim-result" class="p-6 rounded-2xl bg-rose-50 border border-gold-200">
+                    <h4 class="font-serif text-lg font-bold text-grafite mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-clipboard-check text-gold-600"></i>
+                        <span>Resumo do seu Plano PuraPelle:</span>
+                    </h4>
+                    <p id="sim-summary-text" class="text-sm text-gray-700 leading-relaxed italic">
+                        Selecione as opções e informe seu nome para ver o resumo do plano...
+                    </p>
+
+                    <div class="mt-6 pt-4 border-t border-champagne flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div class="text-xs text-gray-500">
+                            *Avaliação clínica obrigatória com a Dra. Camilla Brião para alinhamento dos protocolos.
+                        </div>
+                        <a id="sim-whatsapp-btn" href="#" target="_blank" 
+                           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gold-gradient text-white px-6 py-3.5 rounded-xl font-semibold text-xs uppercase tracking-wider shadow-md hover:opacity-95 transition-all">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>Enviar Plano para Dra. Camilla</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS SECTION -->
+    <section id="depoimentos" class="py-20 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest uppercase text-gold-600 bg-rose-50 px-3 py-1 rounded-md border border-gold-200">
+                    Experiências Reais
+                </span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-grafite mt-3">
+                    Relatos de Pacientes
+                </h2>
+                <p class="text-gray-600 text-base mt-3">
+                    A satisfação de quem confiou sua beleza e autoestima aos cuidados da PuraPelle Clinic.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Review 1 -->
+                <div class="bg-rose-50 p-8 rounded-2xl border border-champagne flex flex-col justify-between shadow-sm hover:shadow-lux transition-shadow">
+                    <div>
+                        <div class="flex text-gold-400 gap-1 text-sm mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 text-sm italic leading-relaxed mb-6">
+                            "A Dra. Camilla Brião é extremamente minuciosa! Fiz meu preenchimento labial e Botox com ela na PuraPelle Clinic. O resultado ficou natural, do jeito que eu queria!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-champagne/60">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150" 
+                             alt="Mariana S. Paciente PuraPelle Clinic" class="w-11 h-11 rounded-full object-cover border border-gold-300">
+                        <div>
+                            <h4 class="font-bold text-grafite text-sm">Mariana S.</h4>
+                            <p class="text-xs text-gray-500">Botox & Preenchimento</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-rose-50 p-8 rounded-2xl border border-champagne flex flex-col justify-between shadow-sm hover:shadow-lux transition-shadow">
+                    <div>
+                        <div class="flex text-gold-400 gap-1 text-sm mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 text-sm italic leading-relaxed mb-6">
+                            "Realizei o protocolo de Bioestimulador de Colágeno e Lipo sem Cortes. Em poucas semanas, o firmeza do rosto e a diminuição de medidas foram surpreendentes!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-champagne/60">
+                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=150" 
+                             alt="Juliana M. Paciente PuraPelle Clinic" class="w-11 h-11 rounded-full object-cover border border-gold-300">
+                        <div>
+                            <h4 class="font-bold text-grafite text-sm">Juliana M.</h4>
+                            <p class="text-xs text-gray-500">Bioestimulador & Lipo Corporal</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-rose-50 p-8 rounded-2xl border border-champagne flex flex-col justify-between shadow-sm hover:shadow-lux transition-shadow">
+                    <div>
+                        <div class="flex text-gold-400 gap-1 text-sm mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 text-sm italic leading-relaxed mb-6">
+                            "Ambiente incrivelmente cheiroso, elegante e acolhedor. A Dra. Camilla transmite uma segurança ímpar. Minha clínica estética do coração!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-champagne/60">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=150" 
+                             alt="Fernanda R. Paciente PuraPelle Clinic" class="w-11 h-11 rounded-full object-cover border border-gold-300">
+                        <div>
+                            <h4 class="font-bold text-grafite text-sm">Fernanda R.</h4>
+                            <p class="text-xs text-gray-500">Drenagem & Estrias</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO & LOCALIZAÇÃO SECTION -->
+    <section id="contato" class="py-20 bg-rose-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Form Left -->
+                <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl border border-champagne shadow-sm">
+                    <span class="text-xs font-bold tracking-widest uppercase text-gold-600 bg-rose-50 px-3 py-1 rounded-md border border-gold-200">
+                        Agendamento VIP
+                    </span>
+                    <h2 class="font-serif text-3xl font-bold text-grafite mt-3 mb-2">
+                        Solicite sua Consulta na PuraPelle Clinic
+                    </h2>
+                    <p class="text-sm text-gray-600 mb-8">
+                        Preencha suas informações para que nossa equipe entre em contato via WhatsApp e reserve seu horário exclusivo.
+                    </p>
+
+                    <form id="contact-form" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-grafite mb-1">Seu Nome</label>
+                                <input type="text" id="form-name" required placeholder="Digite seu nome completo" class="w-full px-4 py-3 rounded-xl bg-rose-50/50 border border-champagne focus:border-gold-500 focus:outline-none text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-grafite mb-1">WhatsApp</label>
+                                <input type="tel" id="form-phone" required placeholder="(00) 90000-0000" class="w-full px-4 py-3 rounded-xl bg-rose-50/50 border border-champagne focus:border-gold-500 focus:outline-none text-sm">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-grafite mb-1">Tratamento de Interesse</label>
+                                <select id="form-treatment" class="w-full px-4 py-3 rounded-xl bg-rose-50/50 border border-champagne focus:border-gold-500 focus:outline-none text-sm">
+                                    <option>Avaliação Estética Geral</option>
+                                    <option>Toxina Botulínica (Botox)</option>
+                                    <option>Bioestimuladores de Colágeno</option>
+                                    <option>Preenchimento Hialurônico</option>
+                                    <option>Lipo sem Cortes</option>
+                                    <option>Drenagem Linfática Estética</option>
+                                    <option>Protocolo para Estrias</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-grafite mb-1">Preferência de Horário</label>
+                                <select id="form-shift" class="w-full px-4 py-3 rounded-xl bg-rose-50/50 border border-champagne focus:border-gold-500 focus:outline-none text-sm">
+                                    <option>Manhã</option>
+                                    <option>Tarde</option>
+                                    <option>Sábado</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-grafite mb-1">Mensagem ou Observação (Opcional)</label>
+                            <textarea id="form-message" rows="3" placeholder="Escreva se tiver dúvidas específicas sobre algum procedimento..." class="w-full px-4 py-3 rounded-xl bg-rose-50/50 border border-champagne focus:border-gold-500 focus:outline-none text-sm"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 bg-gold-gradient text-white font-semibold text-xs uppercase tracking-widest rounded-xl shadow-lux hover:opacity-95 transition-all flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Enviar Solicitação no WhatsApp</span>
+                        </button>
+                    </form>
+
+                    <div id="form-success" class="hidden mt-4 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm">
+                        <i class="fa-solid fa-circle-check text-emerald-600 me-2"></i>
+                        Redirecionando para o WhatsApp da Dra. Camilla Brião...
+                    </div>
+                </div>
+
+                <!-- Info Right -->
+                <div class="lg:col-span-5 flex flex-col justify-between space-y-8">
+                    <div>
+                        <h3 class="font-serif text-2xl font-bold text-grafite mb-4">PuraPelle Clinic</h3>
+                        <p class="text-sm text-gray-600 mb-6">
+                            Atendimento com hora marcada em consultório estruturado rigorosamente com normas de biossegurança.
+                        </p>
+
+                        <div class="space-y-4 text-sm">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-gold-100 flex items-center justify-center text-gold-600 shrink-0 border border-gold-300">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <strong class="block text-grafite">Endereço</strong>
+                                    <span class="text-gray-600">Edifício Medical Center • Sala Executive PuraPelle Clinic</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-gold-100 flex items-center justify-center text-gold-600 shrink-0 border border-gold-300">
+                                    <i class="fa-solid fa-clock"></i>
+                                </div>
+                                <div>
+                                    <strong class="block text-grafite">Horários</strong>
+                                    <span class="text-gray-600">Segunda a Sexta: 08h às 19h<br>Sábados: Com agendamento prévio</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-gold-100 flex items-center justify-center text-gold-600 shrink-0 border border-gold-300">
+                                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                                </div>
+                                <div>
+                                    <strong class="block text-grafite">WhatsApp do Consultório</strong>
+                                    <span class="text-gray-600">(00) 90000-0000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visual Card for Location -->
+                    <div class="rounded-2xl overflow-hidden border border-champagne bg-white p-4 text-center relative shadow-sm">
+                        <div class="h-44 bg-gray-200 rounded-xl flex items-center justify-center relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=800" 
+                                 alt="PuraPelle Clinic - Localização" class="w-full h-full object-cover opacity-80">
+                            <div class="absolute inset-0 bg-gold-900/10"></div>
+                            <div class="absolute bg-white/95 px-4 py-2 rounded-full shadow-lg border border-gold-300 flex items-center gap-2">
+                                <i class="fa-solid fa-location-dot text-gold-600"></i>
+                                <span class="text-xs font-bold text-grafite">PuraPelle Clinic • Dra. Camilla Brião</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-luxury-dark text-white pt-16 pb-8 border-t border-gold-500/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-gray-800">
+                
+                <div class="md:col-span-5 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-gold-400 border border-gold-400 font-serif font-bold">
+                            PP
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-serif text-2xl font-bold tracking-wide">PuraPelle Clinic</span>
+                            <span class="text-[10px] text-gold-400 uppercase tracking-widest">por Dra. Camilla Brião</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-400 leading-relaxed max-w-sm">
+                        Biomedicina Estética de Alta Performance. Tratamentos faciais e corporais com foco no rejuvenescimento sutil e contorno delicado.
+                    </p>
+                </div>
+
+                <div class="md:col-span-3 space-y-2 text-xs">
+                    <p class="font-bold uppercase tracking-wider text-gold-400 mb-3">Navegação</p>
+                    <p><a href="#inicio" class="hover:text-gold-300">Início</a></p>
+                    <p><a href="#sobre" class="hover:text-gold-300">A Clínica PuraPelle</a></p>
+                    <p><a href="#dra-camilla" class="hover:text-gold-300">Dra. Camilla Brião</a></p>
+                    <p><a href="#tratamentos" class="hover:text-gold-300">Tratamentos</a></p>
+                    <p><a href="#simulador" class="hover:text-gold-300">Simulador de Plano</a></p>
+                </div>
+
+                <div class="md:col-span-4 space-y-3 text-xs">
+                    <p class="font-bold uppercase tracking-wider text-gold-400 mb-3">Redes & Agendamento</p>
+                    <div class="flex gap-4 text-lg">
+                        <a href="https://instagram.com" target="_blank" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold-500 transition-colors" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/5500000000000" target="_blank" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold-500 transition-colors" aria-label="WhatsApp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400 pt-2">© 2026 PuraPelle Clinic • Dra. Camilla Brião. Todos os direitos reservados.</p>
+                </div>
+
+            </div>
+
+            <div class="pt-6 text-center text-[10px] text-gray-500">
+                Aviso Legal: Os resultados dos tratamentos estéticos podem variar individualmente conforme características anatômicas e biológicas de cada paciente.
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/5500000000000?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20PuraPelle%20Clinic%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Camilla%20Bri%C3%A3o." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-all transform hover:scale-110 group"
+       aria-label="Falar no WhatsApp">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+        <span class="absolute right-16 bg-grafite text-white text-xs px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-lg">
+            Agendar na PuraPelle Clinic
+        </span>
+    </a>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+
+            let selectedArea = 'Face e Pescoço (Facial)';
+            let selectedGoals = [];
+
+            const areaBtns = document.querySelectorAll('.sim-btn-area');
+            const goalBtns = document.querySelectorAll('.sim-btn-goal');
+            const patientNameInput = document.getElementById('sim-patient-name');
+            const summaryText = document.getElementById('sim-summary-text');
+            const whatsappBtn = document.getElementById('sim-whatsapp-btn');
+
+            function updateSimulatorSummary() {
+                const patientName = patientNameInput ? patientNameInput.value.trim() : '';
+                let namePrefix = patientName ? `Paciente: **${patientName}**` : `Paciente: Não informado`;
+                let text = `${namePrefix} | Área Selecionada: **${selectedArea}**`;
+                
+                if (selectedGoals.length > 0) {
+                    text += ` | Procedimentos: ${selectedGoals.join(', ')}`;
+                } else {
+                    text += ` | Escolha um ou mais procedimentos acima.`;
+                }
+
+                summaryText.innerHTML = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+
+                const rawMessage = `Ol%C3%A1%20Dra.%20Camilla%20Bri%C3%A3o%21%20Simulei%20meu%20plano%20no%20site%20da%20PuraPelle%20Clinic%3A%0A-%20Nome%3A%20${encodeURIComponent(patientName || 'Cliente')}%0A-%20%C3%81rea%3A%20${encodeURIComponent(selectedArea)}%0A-%20Procedimentos%3A%20${encodeURIComponent(selectedGoals.join(', ') || 'Geral')}`;
+                whatsappBtn.href = `https://wa.me/5500000000000?text=${rawMessage}`;
+            }
+
+            if (patientNameInput) {
+                patientNameInput.addEventListener('input', updateSimulatorSummary);
+            }
+
+            areaBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    areaBtns.forEach(b => {
+                        b.classList.remove('border-gold-500', 'bg-gold-50');
+                        b.classList.add('border-gray-200');
+                    });
+                    this.classList.remove('border-gray-200');
+                    this.classList.add('border-gold-500', 'bg-gold-50');
+
+                    selectedArea = this.getAttribute('data-area');
+                    updateSimulatorSummary();
+                });
+            });
+
+            if (areaBtns.length > 0) {
+                areaBtns[0].click();
+            }
+
+            goalBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const goal = this.getAttribute('data-goal');
+                    const icon = this.querySelector('i');
+
+                    if (selectedGoals.includes(goal)) {
+                        selectedGoals = selectedGoals.filter(g => g !== goal);
+                        this.classList.remove('border-gold-500', 'bg-gold-50', 'text-gold-800');
+                        this.classList.add('border-gray-200');
+                        if (icon) icon.classList.add('opacity-0');
+                    } else {
+                        selectedGoals.push(goal);
+                        this.classList.remove('border-gray-200');
+                        this.classList.add('border-gold-500', 'bg-gold-50', 'text-gold-800');
+                        if (icon) icon.classList.remove('opacity-0');
+                    }
+
+                    updateSimulatorSummary();
+                });
+            });
+
+            const contactForm = document.getElementById('contact-form');
+            const formSuccess = document.getElementById('form-success');
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    
+                    const name = document.getElementById('form-name').value;
+                    const phone = document.getElementById('form-phone').value;
+                    const treatment = document.getElementById('form-treatment').value;
+                    const shift = document.getElementById('form-shift').value;
+                    const message = document.getElementById('form-message').value;
+
+                    const msgText = `Ol%C3%A1%20Dra.%20Camilla%20Bri%C3%A3o%21%20Solicito%20agendamento%20na%20PuraPelle%20Clinic.%0A-%20Nome%3A%20${encodeURIComponent(name)}%0A-%20Telefone%3A%20${encodeURIComponent(phone)}%0A-%20Tratamento%3A%20${encodeURIComponent(treatment)}%0A-%20Turno%3A%20${encodeURIComponent(shift)}%0A-%20Mensagem%3A%20${encodeURIComponent(message)}`;
+
+                    if (formSuccess) {
+                        formSuccess.classList.remove('hidden');
+                    }
+
+                    setTimeout(() => {
+                        window.open(`https://wa.me/5500000000000?text=${msgText}`, '_blank');
+                    }, 800);
+                });
+            }
+
+        });
+    </script>
+</body>
+</html>
